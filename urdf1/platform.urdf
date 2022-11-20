@@ -1,0 +1,79 @@
+<?xml version="1.0" ?>
+<robot name="table" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<!-- <xacro:include filename="$(find (Unsaved)_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find (Unsaved)_description)/urdf/(Unsaved).trans" />
+<xacro:include filename="$(find (Unsaved)_description)/urdf/(Unsaved).gazebo" /> -->
+<link name="base_link">
+  <inertial>
+    <origin xyz="8.967909020482838e-17 0.0801951366743971 0.0" rpy="0 0 0"/>
+    <mass value="310.90338397213527"/>
+    <inertia ixx="2.535583" iyy="2.439677" izz="2.535583" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Ball_1">
+  <inertial>
+    <origin xyz="0.0 0.25000035116408365 0.0" rpy="0 0 0"/>
+    <mass value="0.7102512671235804"/>
+    <inertia ixx="0.010228" iyy="0.010228" izz="0.010228" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.257315 -0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="src/urdf1/meshes/Ball_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.257315 -0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="src/urdf1/meshes/Ball_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Table_1">
+  <inertial>
+    <origin xyz="1.2226148077285208e-16 0.07505520510630836 -0.00731986565090304" rpy="0 0 0"/>
+    <mass value="30.1794069058056"/>
+    <inertia ixx="19.330149" iyy="38.532472" izz="19.330151" ixy="0.0" iyz="-2.3e-05" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.507315 -0.007315" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/Table_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.507315 -0.007315" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/Table_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid1" type="continuous">
+  <origin xyz="0.0 0.257315 0.0" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Ball_1"/>
+</joint>
+
+<joint name="Ball2" type="spherical">
+  <origin xyz="0.0 0.25 0.007315" rpy="0 0 0"/>
+  <parent link="Ball_1"/>
+  <child link="Table_1"/>
+</joint>
+
+</robot>
