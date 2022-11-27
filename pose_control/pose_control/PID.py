@@ -1,5 +1,3 @@
-
-
 class PID():
     def __init__(self,P=2,I=0,D=0.2):
         self.P = P
@@ -16,7 +14,6 @@ class PID():
         Ditem = self.error_p1-self.error_p2
         self.error = target-current
         U = self.P * self.error + self.D * Ditem
-        print("u==={}".format(U))
         return  current+U
 
 
