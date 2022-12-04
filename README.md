@@ -10,8 +10,8 @@ numpy = 1.22.4 \
 pybullet = 3.2.5 \
 
 ### Calculation 
-robot kinematic refer to []
-pose calculation refer to []
+robot kinematic refer to 
+pose calculation refer to (https://zhuanlan.zhihu.com/p/64321561)
 
 ### Run in ros
 cd <workspace/src>
@@ -21,9 +21,9 @@ but there is a problem when build joystick, in jointstick_ros2, line 189, there 
 ![avatar](https://github.com/BruceXing24/quadruped_pose/blob/master/media/1.jpg)
 
   #### joystick
-  ![avatar-w300](https://github.com/BruceXing24/quadruped_pose/blob/master/media/joysticker.jpg){zoom:50%}
+  <img src="https://github.com/BruceXing24/quadruped_pose/blob/master/media/joysticker.jpg" width="500px">
   
-  #### video
-  video can be found in []
-  here show servek gif 
+  #### result show
+  video can be found in https://www.bilibili.com/video/BV1HG4y157Ct/ \
+  here show servel gif 
 
