@@ -10,8 +10,9 @@ numpy = 1.22.4 \
 pybullet = 3.2.5 \
 
 ### Calculation 
-robot kinematic refer to 
+robot kinematic refer to https://www.researchgate.net/publication/320307716_Inverse_Kinematic_Analysis_Of_A_Quadruped_Robot
 pose calculation refer to (https://zhuanlan.zhihu.com/p/64321561)
+
 
 ### Run in ros
 cd <workspace/src>
