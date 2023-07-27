@@ -1,7 +1,7 @@
 ## Quadruped_pose
 
 ### Introduce:
-This is a quadruped pose controller using robot kinematic. This can be used in position control motor quadruped
+This is a quadruped pose controller using robot kinematic and PID. This can be used in position control motor quadruped
 
 ### Environment:
 ubuntu = 22.04 \
